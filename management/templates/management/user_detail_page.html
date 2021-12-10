@@ -1,0 +1,52 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+    <div class="container my-5">
+        <div class="row d-flex justify-content-center flex-column align-items-center">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-fex justify-content-center flex-column align-items-center text-center">
+                {% if clock_in.object_list.count == 0 %}
+                    <p>Hi {{ request.user.username }} you have no clock ins yet, Please click on the button below to add </p>
+                    <a href="{% url 'clockincreatepage' request.user.username %}" class="btn btn-success">create</a>
+                {% else %}
+                <ul class="list-group list-group-flush">
+                    {% for date in clock_in.object_list %}
+                    <a href="{% url "clockindetail" date.created.year date.created.month date.created.day date.created.hour date.created.minute date.created.second  %}" class="list-group-item list-group-item-action">
+                        {{ date.created|date:"SHORT_DATE_FORMAT" }}
+                    </a>
+                    {% endfor %}
+                </ul>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination d-flex justify-content-center mt-3">
+                        {% if clock_in.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{clock_in.previous_page_number}}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                        {% else %}
+                            <li class="page-item disabled">
+                                <a class="page-link" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                        {% endif %}
+                        {% for page_number in paginator.page_range %}
+                            <li class="page-item"><a class="page-link" href="?page={{page_number}}">{{page_number}}</a></li>
+                        {% endfor %}
+                        <li class="page-item">
+                            {% if clock_in.has_next %}
+                                <a class="page-link" href="?page={{clock_in.next_page_number}}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            {% endif %}
+                        </li>
+                        </ul>
+                    </nav>
+                <a class="btn btn-success mt-3" href="{% url 'clockincreatepage' request.user.username%}">create</a>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

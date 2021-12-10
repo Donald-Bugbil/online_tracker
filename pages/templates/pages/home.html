@@ -1,0 +1,181 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'pages/style.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container mb-10 pt-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-12 col-lg-6 col-sm-12 col-md-6 col-xl-6">
+                <h1 class="mt-5 " style="font-family:'Oswald', sans-serif;">Boost Your Business <br> Aiming To Increase
+                    productivity<br>At work</h1>
+                <a class="btn btn-success mt-4">Keep moving</a>
+                <a class="btn btn-light me-3">Features</a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+             <img src="{% static 'pages/working.svg' %}" class="img-fluid">
+        </div>
+    </div>
+</div>
+<div class="container mt-5 mb-10">
+    <div class="row d-flex justify-content-center">
+        <div class="col-12 col-md-12 col-sm-12 col-lg-12 col-xl-12">
+            <div class="d-flex justify-content-center align-items-center avatar-container"
+                style="background-color: #00B74A;">
+                <span><i class="far fa-clock fa-4x" style="color: white;"></i></span>
+            </div>
+            <h3 class="headline"> Why Clock App </h3>
+            <p class="survey">At Andela, we are committed to your success. We set you up with long-term client engagements,<br>
+                connect you to a vibrant global community, and provide resources and mentorship to help you<br>
+                &nbsp; grow during every stage of your career.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--the why cards-->
+<div class="container-fluid section" style="margin-top: 80px; background: #F4F6FC;">
+    <div class="row d-flex justify-content-center">
+        <div class="col-12">
+            <div class="container">
+                <div class="row" id="reason-why">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                        <div class="why-card text-left drop-shadow">
+                            <div class="d-flex circle justify-content-center" style="background: #3359DF;">
+                                <span class="my-auto"><i class="fab fa-accusoft fa-lg"
+                                        style="color: white;"></i></span>
+                            </div>
+                            <h5 class="card-headline mb-4">Exclusive Long-Term Opportunities</h5>
+                            <p class="text-description">Our team leverages human expertise as well as smart matching automation 
+                                to match you with long-lasting, 
+                                rewarding roles at innovative companies.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                        <div class="why-card text-left drop-shadow">
+                            <div class="d-flex circle justify-content-center" style="background: #FFAF30;">
+                                <span class="my-auto"><i class="fab fa-accusoft fa-lg"
+                                        style="color: white;"></i></span>
+                            </div>
+                            <h5 class="card-headline mb-4">Competitive Compensation</h5>
+                            <p class="text-description">Our mission is to find you the right opportunity at a salary that 
+                                reflects your expertise and your skills, with opportunity for additional benefits via Deel.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                        <div class="why-card text-left drop-shadow">
+                            <div class="d-flex circle justify-content-center" style="background: #5BB3B7;">
+                                <span class="my-auto"><i class="fab fa-accusoft fa-lg"
+                                        style="color: white;"></i></span>
+                            </div>
+                            <h5 class="card-headline mb-4">Career Coaching and Guidance</h5>
+                            <p class="text-description">With profile reviews and verification, role matching, rate guidance, 
+                                and more, our team is focused on your long-term career growth.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                        <div class="why-card text-left drop-shadow">
+                            <div class="d-flex circle justify-content-center" style="background: #00B74A;">
+                                <span class="my-auto"><i class="fab fa-accusoft fa-lg"
+                                        style="color: white;"></i></span>
+                            </div>
+                            <h5 class="card-headline mb-4">Smart Role<br> Matching</h5>
+                            <p class="text-description">Our team leverages human expertise as well as smart matching automation 
+                                to match you with long-lasting, rewarding roles at innovative companies.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                        <div class="why-card text-left drop-shadow">
+                            <div class="d-flex circle justify-content-center" style="background: #3359DF;">
+                                <span class="my-auto"><i class="fab fa-accusoft fa-lg"
+                                        style="color: white;"></i></span>
+                            </div>
+                            <h5 class="card-headline mb-4">Professional <br> Flexibility</h5>
+                            <p class="text-description">
+                                We work with you to identify the right client role for you based on work 
+                                schedule, tech stacks, team dynamics, and overall best fit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                        <div class="why-card text-left drop-shadow">
+                            <div class="d-flex circle justify-content-center" style="background: #FFAF30;">
+                                <span class="my-auto"><i class="fab fa-accusoft fa-lg"
+                                        style="color: white;"></i></span>
+                            </div>
+                            <h5 class="card-headline mb-4">Professional Growth <br> Opportunities</h5>
+                            <p class="text-description">
+                                Andela provides educational discounts, exclusive events, varied course formats and exposure to 
+                                scholarships with companies like Google, Microsoft, and Amazon.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!--stat and survey-->
+<div class="container mt-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-12 col-md-12 col-sm-12 col-lg-12 col-xl-12">
+            <div class="d-flex justify-content-center align-items-center avatar-container"
+                style="background-color: #00B74A;">
+                <span><i class="fa fa-chart-line fa-4x" style="color: white;"></i></span>
+            </div>
+            <h3 class="headline"> Clock App by the numbers </h3>
+            <p class="survey">We surveyed engineers around the globe to better gauge the impact that working at
+                Andela has<br>
+                &nbsp; had on their lives. Here is what they had to say.
+            </p>
+        </div>
+    </div>
+</div>
+<!--survey-->
+<div class="container">
+    <div class="row d-flex justify-content-center my-5">
+        <div class="col-lg-3 col-xl-3 col-md-6 col-sm-12 text-center">
+            <div class="stat-container py-5">
+                <div class="stat text-teal">89%</div>
+                <div class="stat-label">of our customers give us positive feedback and enjoy our services</div>
+            </div>
+
+        </div>
+        <div class="col-12 col-lg-3 col-xl-3 col-md-6 col-sm-12 text-center">
+            <div class="stat-container py-5">
+                <div class="stat text-pink">88%</div>
+                <div class="stat-label">of our customers give us positive feedback and enjoy our services</div>
+            </div>
+
+        </div>
+        <div class="col-12 col-lg-3 col-xl-3 col-md-6 col-sm-12 text-center">
+            <div class="stat-container py-5">
+                <div class="stat text-green">81%</div>
+                <div class="stat-label">of our customers give us positive feedback and enjoy our services</div>
+            </div>
+
+        </div>
+        <div class="col -12 col-lg-3 col-xl-3 col-md-6 col-sm-12 text-center">
+            <div class="stat-container py-5">
+                <div class="stat text-blue">85%</div>
+                <div class="stat-label">of our customers give us positive feedback and enjoy our services</div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}
